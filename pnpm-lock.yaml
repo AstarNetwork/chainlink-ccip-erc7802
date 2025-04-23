@@ -11,6 +11,9 @@ importers:
       '@chainlink/contracts-ccip':
         specifier: ^1.5.0
         version: 1.5.0(@nomicfoundation/hardhat-verify@2.0.13(hardhat@2.23.0(ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3))(typescript@5.8.3)))(ethers@6.13.5)(hardhat@2.23.0(ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3))(typescript@5.8.3))
+      '@openzeppelin/contracts':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@openzeppelin/contracts-upgradeable':
         specifier: ^5.3.0
         version: 5.3.0(@openzeppelin/contracts@5.3.0)
