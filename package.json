@@ -10,6 +10,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@chainlink/env-enc": "^1.0.5",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
