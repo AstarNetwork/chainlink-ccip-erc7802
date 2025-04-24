@@ -1,0 +1,1 @@
+export { getContractVerification } from "./getContractVerification";

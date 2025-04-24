@@ -1,0 +1,24 @@
+{
+  "soneiumMinato": {
+    "chainId": 1946,
+    "chainSelector": "686603546605904534",
+    "router": "0x443a1bce545d56E2c3f20ED32eA588395FFce0f4",
+    "rmnProxy": "0x6172F4f60eEE3876cF83318DEe4477BfAf15Ffd3",
+    "tokenAdminRegistry": "0xD2334a6f4f79CE462193EAcB89eB2c29Ae552750",
+    "registryModuleOwnerCustom": "0xe06fE3AEfef3a27b8BF0edd5ae834B006EdE3aa1",
+    "link": "0x7ea13478Ea3961A0e8b538cb05a9DF0477c79Cd2",
+    "confirmations": 8,
+    "nativeCurrencySymbol": "ETH"
+  },
+  "soneium": {
+    "chainId": 1868,
+    "chainSelector": "12505351618335765396",
+    "router": "0x8C8B88d827Fe14Df2bc6392947d513C86afD6977",
+    "rmnProxy": "0x3117f515D763652A32d3D6D447171ea7c9d57218",
+    "tokenAdminRegistry": "0x5ba21F6824400B91F232952CA6d7c8875C1755a4",
+    "registryModuleOwnerCustom": "0x1d0B6B3ef94dD6A68b7E16bd8B01fca9EA8e3d6E",
+    "link": "0x32D8F819C8080ae44375F8d383Ffd39FC642f3Ec",
+    "confirmations": 8,
+    "nativeCurrencySymbol": "ETH"
+  }
+}
