@@ -6,7 +6,9 @@
   "scripts": {
     "build": "hardhat compile",
     "test": "hardhat test",
-    "coverage": "hardhat coverage"
+    "coverage": "hardhat coverage",
+    "deploy:soneiumMinato": "hardhat deployAstarTokenAndPool --network soneiumMinato --pooltype burnMint --verifycontract true",
+    "deploy:soneium": "hardhat deployAstarTokenAndPool --network soneium --pooltype burnMint --verifycontract true"
   },
   "keywords": [],
   "author": "",
