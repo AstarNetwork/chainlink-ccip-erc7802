@@ -194,16 +194,16 @@ graph TD
     Proxy --> DeployedToken[Deployed Token Contract]
     
     %% Key roles and permissions
-    Owner[Owner] -- "grants/revokes" --> MINTER_ROLE[MINTER_ROLE]
-    Owner -- "grants/revokes" --> BURNER_ROLE[BURNER_ROLE]
+    Owner[Owner] --> MINTER_ROLE[MINTER_ROLE]
+    Owner --> BURNER_ROLE[BURNER_ROLE]
     
     %% ERC7802 functions
-    MINTER_ROLE -- "can call" --> CrosschainMint[crosschainMint()]
-    BURNER_ROLE -- "can call" --> CrosschainBurn[crosschainBurn()]
+    MINTER_ROLE --> CrosschainMint[crosschainMint]
+    BURNER_ROLE --> CrosschainBurn[crosschainBurn]
     
     %% Events
-    CrosschainMint -- "emits" --> MintEvent[CrosschainMint event]
-    CrosschainBurn -- "emits" --> BurnEvent[CrosschainBurn event]
+    CrosschainMint --> MintEvent[CrosschainMint event]
+    CrosschainBurn --> BurnEvent[CrosschainBurn event]
 ```
 
 ### Cross-Chain Flow
