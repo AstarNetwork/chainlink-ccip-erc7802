@@ -43,8 +43,7 @@ describe("ShibuyaToken", function () {
         call: {
           fn: "initializeV2",
           args: [owner.address],
-        },
-        unsafeAllow: ["missing-initializer"],
+        }
       }
     );
 
@@ -58,8 +57,7 @@ describe("ShibuyaToken", function () {
         call: {
           fn: "initializeV3",
           args: [owner.address],
-        },
-        unsafeAllow: ["missing-initializer"],
+        }
       }
     );
 
@@ -353,10 +351,7 @@ describe("ShibuyaToken", function () {
       
       await upgrades.upgradeProxy(
         await shibuyaToken.getAddress(),
-        shibuyaTokenV2Factory,
-        {
-          unsafeAllow: ["missing-initializer"],
-        }
+        shibuyaTokenV2Factory
       );
   
       expect(await upgradedContract.getAddress()).to.equal(
@@ -377,10 +372,7 @@ describe("ShibuyaToken", function () {
       
       await upgrades.upgradeProxy(
         await shibuyaToken.getAddress(),
-        shibuyaTokenV2Factory,
-        {
-          unsafeAllow: ["missing-initializer"],
-        }
+        shibuyaTokenV2Factory
       );
       
       // Verify state is maintained
@@ -394,10 +386,7 @@ describe("ShibuyaToken", function () {
       await expect(
         upgrades.upgradeProxy(
           await shibuyaToken.getAddress(),
-          shibuyaTokenV2Factory.connect(user),
-          {
-            unsafeAllow: ["missing-initializer"],
-          }
+          shibuyaTokenV2Factory.connect(user)
         )
       ).to.be.revertedWith("Caller is not the owner");
     });
@@ -416,10 +405,7 @@ describe("ShibuyaToken", function () {
       
       await upgrades.upgradeProxy(
         await shibuyaToken.getAddress(),
-        shibuyaTokenV2Factory,
-        {
-          unsafeAllow: ["missing-initializer"],
-        }
+        shibuyaTokenV2Factory
       );
       
       // Check total supply after upgrade
@@ -443,10 +429,7 @@ describe("ShibuyaToken", function () {
       
       await upgrades.upgradeProxy(
         await shibuyaToken.getAddress(),
-        shibuyaTokenV2Factory,
-        {
-          unsafeAllow: ["missing-initializer"],
-        }
+        shibuyaTokenV2Factory
       );
       
       // Verify roles are maintained
@@ -468,10 +451,7 @@ describe("ShibuyaToken", function () {
       
       await upgrades.upgradeProxy(
         await shibuyaToken.getAddress(),
-        shibuyaTokenV2Factory,
-        {
-          unsafeAllow: ["missing-initializer"],
-        }
+        shibuyaTokenV2Factory
       );
       
       // Test mint functionality

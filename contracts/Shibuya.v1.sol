@@ -24,6 +24,7 @@ contract ShibuyaToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeab
         _disableInitializers();
     }
 
+    /// @custom:oz-upgrades-validate-as-initializer
     function initializeV2(address defaultAdmin) reinitializer(2) public {
         require(defaultAdmin != address(0), "Cannot set the default admin to zero address");
 
