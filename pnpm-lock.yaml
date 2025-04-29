@@ -2761,8 +2761,8 @@ packages:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-protocol@1.9.0:
-    resolution: {integrity: sha512-6AkqYKbOwHVlDnXrOZlSkpvn9zBA4y87HGlrPhnSPLkcLRnTPcXm2C/CNrOkQB2T7QKYv+IzCcmW0K974n3z9Q==}
+  pg-protocol@1.9.5:
+    resolution: {integrity: sha512-DYTWtWpfd5FOro3UnAfwvhD8jh59r2ig8bPtc9H8Ds7MscE/9NYruUQWFAOuraRl29jwcT2kyMFQ3MxeaVjUhg==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
@@ -2799,8 +2799,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  posthog-node@4.13.0:
-    resolution: {integrity: sha512-4rGi+9hf4WmMcKjWuzBtQYzFRltfVmSPCB5N364AhchFAT2Eoclx1M7KUWJZ0C2fMObdNGRNw1NQYEO4iGnviQ==}
+  posthog-node@4.14.0:
+    resolution: {integrity: sha512-PitSiuxGiVFl0ItuhIfi3Sq1tcaMU4vlbPu1wv0qufTJGDjWthOOr4vYfFIs1xkbJFOQcfGczMXkr44kX5TDDg==}
     engines: {node: '>=15.0.0'}
 
   prelude-ls@1.1.2:
@@ -5711,7 +5711,7 @@ snapshots:
   '@types/pg@8.6.1':
     dependencies:
       '@types/node': 22.14.1
-      pg-protocol: 1.9.0
+      pg-protocol: 1.9.5
       pg-types: 2.2.0
 
   '@types/prettier@2.7.3': {}
@@ -7298,7 +7298,7 @@ snapshots:
 
   pg-int8@1.0.1: {}
 
-  pg-protocol@1.9.0: {}
+  pg-protocol@1.9.5: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -7326,7 +7326,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  posthog-node@4.13.0(debug@4.4.0):
+  posthog-node@4.14.0(debug@4.4.0):
     dependencies:
       axios: 1.8.4(debug@4.4.0)
     transitivePeerDependencies:
@@ -8116,7 +8116,7 @@ snapshots:
     dependencies:
       '@sentry/node': 8.55.0
       env-paths: 2.2.1
-      posthog-node: 4.13.0(debug@4.4.0)
+      posthog-node: 4.14.0(debug@4.4.0)
       readline-sync: 1.4.10
       uuid: 11.1.0
     transitivePeerDependencies:
