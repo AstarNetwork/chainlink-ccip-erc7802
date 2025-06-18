@@ -1,8 +1,8 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@openzeppelin/hardhat-upgrades";
-import "./tasks";
 import { etherscan, networks } from "./config";
+import "./tasks";
 
 const SOLC_SETTINGS = {
   optimizer: {
