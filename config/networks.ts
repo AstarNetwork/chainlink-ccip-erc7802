@@ -9,18 +9,11 @@ const PRIVATE_KEY_2 = process.env.PRIVATE_KEY_2;
 
 const accounts = [];
 if (PRIVATE_KEY) {
-  console.log("Adding private key to accounts");
   accounts.push(PRIVATE_KEY);
 }
-
 if (PRIVATE_KEY_2) {
   accounts.push(PRIVATE_KEY_2);
 }
-
-if (accounts.length === 0) {
-  throw new Error("No private keys found in environment variables. Please set PRIVATE_KEY or PRIVATE_KEY_2.");
-}
-
 
 const networks: Networks = {
   [Chains.soneiumMinato]: {
