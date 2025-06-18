@@ -8,7 +8,8 @@
     "test": "hardhat test",
     "coverage": "hardhat coverage",
     "deploy:soneiumMinato": "hardhat deployAstarTokenAndPool --network soneiumMinato --pooltype burnMint --verifycontract true",
-    "deploy:soneium": "hardhat deployAstarTokenAndPool --network soneium --pooltype burnMint --verifycontract true"
+    "deploy:soneium": "hardhat deployAstarTokenAndPool --network soneium --pooltype burnMint --verifycontract true",
+    "deploy:optimism": "hardhat fast-forward-deploy --network optimism --nonce 15 --verifycontract true"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +42,7 @@
   "dependencies": {
     "@chainlink/contracts-ccip": "^1.5.0",
     "@openzeppelin/contracts": "^5.3.0",
-    "@openzeppelin/contracts-upgradeable": "^5.3.0"
+    "@openzeppelin/contracts-upgradeable": "^5.3.0",
+    "dotenv": "^16.5.0"
   }
 }

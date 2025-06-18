@@ -1,18 +1,24 @@
 import { Chains, EtherscanConfig, Networks } from "./types";
 import configData from "./config.json";
+// require("@chainlink/env-enc").config();
+import * as dotenv from "dotenv";
 
-require("@chainlink/env-enc").config();
-
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+dotenv.config();
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 const PRIVATE_KEY_2 = process.env.PRIVATE_KEY_2;
 
 const accounts = [];
 if (PRIVATE_KEY) {
+  console.log("Adding private key to accounts");
   accounts.push(PRIVATE_KEY);
 }
 
 if (PRIVATE_KEY_2) {
   accounts.push(PRIVATE_KEY_2);
+}
+
+if (accounts.length === 0) {
+  throw new Error("No private keys found in environment variables. Please set PRIVATE_KEY or PRIVATE_KEY_2.");
 }
 
 
@@ -31,12 +37,28 @@ const networks: Networks = {
     nonce: undefined,
     accounts,
   },
+  // [Chains.optimism]: {
+  //   ...configData.optimism,
+  //   url: process.env.OPTIMISM_RPC_URL || "https://mainnet.optimism.io",
+  //   gasPrice: undefined,
+  //   nonce: undefined,
+  //   accounts,
+  // },
+  [Chains.opSepolia]: {
+    ...configData.opSepolia,
+    url: process.env.OPTIMISM_SEPOLIA_RPC_URL || "https://sepolia.optimism.io",
+    gasPrice: undefined,
+    nonce: undefined,
+    accounts,
+  },
 };
 
 const etherscan: EtherscanConfig = {
   apiKey: {
     [Chains.soneiumMinato]: " ",
     [Chains.soneium]: " ",
+    [Chains.opSepolia]: " ",
+    [Chains.optimism]: " ",
   },
   customChains: [
     {
@@ -53,6 +75,22 @@ const etherscan: EtherscanConfig = {
       urls: {
         apiURL: "https://soneium.blockscout.com/api",
         browserURL: "https://soneium.blockscout.com",
+      },
+    },
+    {
+      network: Chains.opSepolia,
+      chainId: 11155420,
+      urls: {
+        apiURL: "https://optimism-sepolia.blockscout.com/api",
+        browserURL: "https://optimism-sepolia.blockscout.com",
+      },
+    },
+    {
+      network: Chains.optimism,
+      chainId: 10,
+      urls: {
+        apiURL: "https://optimism.blockscout.com/api",
+        browserURL: "https://optimism.blockscout.com",
       },
     },
   ],
