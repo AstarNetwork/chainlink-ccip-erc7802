@@ -9,7 +9,7 @@
     "coverage": "hardhat coverage",
     "deploy:soneiumMinato": "hardhat deployAstarTokenAndPool --network soneiumMinato --pooltype burnMint --verifycontract true",
     "deploy:soneium": "hardhat deployAstarTokenAndPool --network soneium --pooltype burnMint --verifycontract true",
-    "deploy:optimism": "hardhat fast-forward-deploy --network optimism --nonce 15 --verifycontract true"
+    "deploy:optimism": "hardhat deployAtNonce --network optimism --nonce 15 --verifycontract true"
   },
   "keywords": [],
   "author": "",
