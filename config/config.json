@@ -20,5 +20,27 @@
     "link": "0x32D8F819C8080ae44375F8d383Ffd39FC642f3Ec",
     "confirmations": 8,
     "nativeCurrencySymbol": "ETH"
+  },
+  "optimism": {
+    "chainId": 10,
+    "chainSelector": "",
+    "router": "",
+    "rmnProxy": "",
+    "tokenAdminRegistry": "",
+    "registryModuleOwnerCustom": "",
+    "link": "",
+    "confirmations": 8,
+    "nativeCurrencySymbol": "ETH"
+  },
+  "opSepolia": {
+    "chainId": 11155420,
+    "chainSelector": "",
+    "router": "",
+    "rmnProxy": "",
+    "tokenAdminRegistry": "",
+    "registryModuleOwnerCustom": "",
+    "link": "",
+    "confirmations": 8,
+    "nativeCurrencySymbol": "ETH"
   }
 }

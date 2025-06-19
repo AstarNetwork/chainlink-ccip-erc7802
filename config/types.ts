@@ -13,6 +13,8 @@ export interface ChainConfig {
 export enum Chains {
   soneiumMinato = "soneiumMinato",
   soneium = "soneium",
+  optimism = "optimism",
+  opSepolia = "opSepolia",
 }
 
 export type Configs = {
