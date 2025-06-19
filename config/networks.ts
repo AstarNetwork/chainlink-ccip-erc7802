@@ -1,9 +1,7 @@
 import { Chains, EtherscanConfig, Networks } from "./types";
 import configData from "./config.json";
-// require("@chainlink/env-enc").config();
-import * as dotenv from "dotenv";
+require("@chainlink/env-enc").config();
 
-dotenv.config();
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 const PRIVATE_KEY_2 = process.env.PRIVATE_KEY_2;
 
@@ -30,13 +28,13 @@ const networks: Networks = {
     nonce: undefined,
     accounts,
   },
-  // [Chains.optimism]: {
-  //   ...configData.optimism,
-  //   url: process.env.OPTIMISM_RPC_URL || "https://mainnet.optimism.io",
-  //   gasPrice: undefined,
-  //   nonce: undefined,
-  //   accounts,
-  // },
+  [Chains.optimism]: {
+    ...configData.optimism,
+    url: process.env.OPTIMISM_RPC_URL || "https://mainnet.optimism.io",
+    gasPrice: undefined,
+    nonce: undefined,
+    accounts,
+  },
   [Chains.opSepolia]: {
     ...configData.opSepolia,
     url: process.env.OPTIMISM_SEPOLIA_RPC_URL || "https://sepolia.optimism.io",
